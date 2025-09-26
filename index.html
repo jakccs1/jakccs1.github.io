@@ -206,8 +206,9 @@
 
       // Beispielhafte Prüfung (hier nur Demo)
       if (username === "admin" && password === "1234") {
-        alert("Login erfolgreich!");
-        window.location.href = "dashboard.html"; // Weiterleitung
+      localStorage.setItem("username", username); // ✅ Nutzer speichern
+      alert("Login erfolgreich!");
+      window.location.href = "dashboard.html"; // Weiterleitung
       } else {
         alert("Falsche Login-Daten!");
       }
